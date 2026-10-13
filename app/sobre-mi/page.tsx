@@ -23,7 +23,7 @@ export default function AboutPage() {
     <Reveal><section className="philosophy section"><Reveal><p className="eyebrow"><span/> Mi misión y visión</p><h2>ENTRENAR CON<br/><em>RESPONSABILIDAD.</em></h2></Reveal>
       <div className="philosophy-grid">
         {[["Misión","Influir positivamente en la vida de las personas, promoviendo un cambio de hábitos y un bienestar integral mediante el entrenamiento y la actividad física."],["Visión","Formar una comunidad de personas que amen entrenar, incorporen buenos hábitos y busquen un bienestar integral."],["Mi compromiso","Seguir formándome para ofrecer un acompañamiento profesional, responsable y alejado de las modas sin fundamento."]].map(([t,p],i)=><Reveal className="philosophy-card" delay={i*.1} key={t}><span>0{i+1}</span><h3>{t}</h3><p>{p}</p></Reveal>)}
-      </div><Link className="button primary" href="/contacto">Quiero empezar <FaArrowRight/></Link>
+      </div><Link className="button primary" href="/entrenamientos">Quiero empezar <FaArrowRight/></Link>
     </section></Reveal>
   </main>;
 }

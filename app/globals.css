@@ -28,6 +28,20 @@ footer{padding:70px clamp(22px,7vw,110px) 26px;background:#070908;border-top:1px
 @media(max-width:900px){.page-hero:after{width:440px;height:440px;right:-230px;top:56%;opacity:.7}.page-hero>div:not(.hero-grid){max-width:100%}.header-whatsapp{margin-left:auto;margin-right:15px}}
 @media(max-width:600px){.back-to-top{right:18px!important;bottom:18px!important;width:46px;height:46px}.page-hero:after{width:320px;height:320px;right:-215px;top:55%}.header-whatsapp{width:36px;height:36px;margin-right:12px}}
 .page-hero:after{content:none!important;display:none!important}
+.video-grid{grid-template-columns:repeat(3,minmax(0,1fr));min-height:0;align-items:start}
+.testimonial-video-reveal{min-width:0}
+.testimonial-video-card{position:relative;overflow:hidden;background:#111513;border:1px solid #282c29;--video-accent:var(--green)}
+.testimonial-video{display:block;width:100%;aspect-ratio:var(--video-ratio,9 / 16);max-height:680px;object-fit:contain;background:#080a09}
+.testimonial-play{position:absolute;top:calc((100% - 53px) / 2);left:50%;transform:translate(-50%,-50%);width:76px;height:76px;border:1px solid var(--video-accent);border-radius:50%;display:grid;place-items:center;background:color-mix(in srgb,var(--video-accent) 88%,transparent);color:#080a09;font-size:23px;cursor:pointer;box-shadow:0 0 0 12px color-mix(in srgb,var(--video-accent) 15%,transparent);transition:transform .25s,box-shadow .25s}
+.testimonial-play:hover{transform:translate(-50%,-50%) scale(1.08);box-shadow:0 0 0 18px color-mix(in srgb,var(--video-accent) 18%,transparent)}
+.testimonial-play.is-paused{background:#080a09cc;color:var(--video-accent)}
+.testimonial-video-card.is-started .testimonial-play{top:calc((100% - 53px) / 2)}
+.video-caption{display:block;padding:16px 18px;color:var(--ink);font-family:var(--font-display);font-size:18px;text-transform:uppercase;letter-spacing:.04em;background:var(--paper)}
+.results-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.whatsapp-button{border-color:var(--green);color:var(--green)}
+.whatsapp-button:hover{background:var(--green);color:var(--ink)}
+@media(max-width:900px){.video-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.video-grid{grid-template-columns:1fr;gap:20px}.testimonial-video{max-height:74svh;object-fit:contain}.testimonial-play{width:66px;height:66px}.video-caption{font-size:16px;padding:13px 16px}}
 .service-card:before{transition:transform 1.15s cubic-bezier(.22,1,.36,1)!important}
 .service-card:hover:before,.service-card:focus-within:before{transform:scaleX(1)!important}
 .service-card:before{height:4px;transform:scaleX(0);transform-origin:left;transition:transform .8s cubic-bezier(.16,1,.3,1)}

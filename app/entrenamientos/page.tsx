@@ -1,5 +1,4 @@
-import Link from "next/link";
-import { FaArrowRight, FaCheck } from "react-icons/fa";
+import { FaArrowRight, FaCheck, FaWhatsapp } from "react-icons/fa";
 import { LuBicepsFlexed, LuChartNoAxesCombined, LuHeartPulse, LuZap, LuDumbbell } from "react-icons/lu";
 import { Reveal } from "../site-components";
 
@@ -25,7 +24,7 @@ export default function TrainingPage() {
       <Reveal><p>Cada propuesta tiene un propósito y un punto de partida distinto. Si no sabés cuál se ajusta a vos, escribime y lo conversamos.</p></Reveal>
     </div><div className="service-grid">{services.map((s,i)=>{const Icon=s.icon;return <Reveal className="service-card" delay={i*.06} key={s.title}>
       <div className="card-top"><Icon/><span>{s.n}</span></div><h3>{s.title}</h3><p>{s.text}</p>
-      <ul>{s.items.map(x=><li key={x}><FaCheck/> {x}</li>)}</ul><Link href="/contacto">Consultar <FaArrowRight/></Link>
+      <ul>{s.items.map(x=><li key={x}><FaCheck/> {x}</li>)}</ul><a href={`https://wa.me/5493516542098?text=${encodeURIComponent(`Hola Facu, me interesa el plan de ${s.title}. Quiero que me cuentes cómo sería y qué necesitás para empezar.`)}`} target="_blank" rel="noreferrer">Consultar por WhatsApp <FaWhatsapp/></a>
     </Reveal>})}</div></section>
     <Reveal><section className="process section"><div className="section-label">Cómo empezamos</div><Reveal className="process-head"><h2>UN PLAN CLARO.<br/>UN PROCESO <em>PROPIO.</em></h2></Reveal>
       <div className="process-list">{[["01","Nos conocemos","Hablamos de tu experiencia, tu actividad y los objetivos que querés alcanzar."],["02","Elegimos el enfoque","Definimos qué tipo de entrenamiento se ajusta mejor a tu punto de partida."],["03","Planificamos y avanzamos","Entrenás con una planificación progresiva y revisamos el proceso para hacer ajustes."]].map(([n,t,p])=><Reveal className="process-item" key={n}><span>{n}</span><h3>{t}</h3><p>{p}</p><FaArrowRight/></Reveal>)}</div>
