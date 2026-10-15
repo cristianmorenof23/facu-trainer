@@ -2,7 +2,11 @@ import Link from "next/link";
 import { FaArrowRight, FaQuoteLeft } from "react-icons/fa";
 import { Reveal } from "../site-components";
 
-export const metadata = { title: "Sobre mí | Facundo Oliva" };
+export const metadata = {
+  title: "Sobre Facundo",
+  description: "Conocé a Facundo Oliva: técnico superior en actividad física, preparador físico y entrenador personal en Córdoba.",
+  alternates: { canonical: "/sobre-mi" },
+};
 
 export default function AboutPage() {
   return <main className="inner-page">

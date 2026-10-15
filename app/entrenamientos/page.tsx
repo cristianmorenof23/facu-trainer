@@ -10,7 +10,11 @@ const services = [
   { icon: LuZap, n: "05", title: "Potencia y fuerza rápida", text: "Para deportistas con una base de fuerza que quieren desarrollar potencia y trasladarla a su actividad.", items: ["Desarrollo de fuerza rápida", "Transferencia al rendimiento deportivo", "Preparación según tu disciplina"] },
 ];
 
-export const metadata = { title: "Entrenamientos | Facundo Oliva" };
+export const metadata = {
+  title: "Entrenamientos personalizados",
+  description: "Planes de iniciación, hipertrofia, fuerza, recomposición corporal y potencia adaptados a tus objetivos.",
+  alternates: { canonical: "/entrenamientos" },
+};
 
 export default function TrainingPage() {
   return <main className="inner-page">

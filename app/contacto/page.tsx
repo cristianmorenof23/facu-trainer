@@ -1,5 +1,5 @@
 import { FaRegClock } from "react-icons/fa";
 import { ContactForm, Reveal } from "../site-components";
 
-export const metadata={title:"Contacto | Facundo Oliva"};
+export const metadata={title:"Contacto",description:"Contactá a Facundo Oliva por WhatsApp y encontrá un plan de entrenamiento personalizado para tus objetivos.",alternates:{canonical:"/contacto"}};
 export default function ContactPage(){return <main className="inner-page"><section className="page-hero compact" id="inicio"><div className="hero-grid"/><Reveal><p className="eyebrow"><span/> Demos el primer paso</p><h1>¿LISTO PARA<br/><em>EMPEZAR?</em></h1><p>Contame tu objetivo y encontremos juntos la mejor manera de trabajar.</p></Reveal></section><Reveal><section className="contact section"><div className="contact-copy"><Reveal><p className="eyebrow"><span/> Contacto directo</p><h2>HABLEMOS DE<br/><em>VOS.</em></h2><p>Completá el mensaje con tu nombre y objetivo. Se abrirá WhatsApp para que puedas enviarlo de manera directa.</p><div className="availability"><FaRegClock/><div><strong>Respuesta personalizada</strong><span>Coordinamos una primera charla</span></div></div></Reveal></div><Reveal className="contact-panel" delay={.12}><ContactForm/></Reveal></section></Reveal></main>}

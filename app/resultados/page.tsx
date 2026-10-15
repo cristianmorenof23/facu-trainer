@@ -3,7 +3,11 @@ import { FaArrowRight, FaWhatsapp } from "react-icons/fa";
 import { Reveal } from "../site-components";
 import { TestimonialGallery } from "./testimonial-gallery";
 
-export const metadata = { title: "Resultados | Facundo Oliva" };
+export const metadata = {
+  title: "Resultados y testimonios",
+  description: "Conocé las experiencias y testimonios de personas que entrenan con Facundo Oliva.",
+  alternates: { canonical: "/resultados" },
+};
 
 export default function ResultsPage() {
   return <main className="inner-page">
