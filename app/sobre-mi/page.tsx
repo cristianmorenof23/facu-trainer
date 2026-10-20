@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { FaArrowRight, FaQuoteLeft } from "react-icons/fa";
 import { Reveal } from "../site-components";
 
@@ -16,8 +17,8 @@ export default function AboutPage() {
       <p>Soy Facu, técnico superior en actividad física y preparador físico, creador de esta propuesta de entrenamiento personalizado.</p>
     </Reveal></section>
     <section className="about section"><div className="section-label">01 / Un poco sobre mí</div><div className="about-layout">
-      <Reveal><h2>ENTRENAR PARA<br/><em>VIVIR MEJOR.</em></h2></Reveal>
-      <Reveal className="about-copy" delay={.12}><FaQuoteLeft className="quote-icon"/><p className="lead">Soy Facu, tengo 28 años y el entrenamiento y la actividad física me apasionan.</p>
+      <Reveal className="about-portrait"><Image className="about-photo" src="/facu_2.jpg" alt="Facundo Oliva, entrenador personal" width={1200} height={800}/></Reveal>
+      <Reveal className="about-copy" delay={.12}><p className="eyebrow"><span/> Sobre mí</p><h2>ENTRENAR PARA<br/><em>VIVIR MEJOR.</em></h2><p className="lead">Soy Facu, tengo 28 años y el entrenamiento y la actividad física me apasionan.</p>
         <p>Me formé como técnico superior en actividad física y entrenamiento de musculación, y como preparador físico. También me capacité en Cross Training y entrenamiento funcional.</p>
         <p>Entreno y desarrollo habilidades desde la adolescencia, con experiencia en fuerza, estética corporal, musculación y atletismo. Hoy quiero usar ese recorrido para influir positivamente en tus hábitos, tu físico y tu estilo de vida.</p>
         <p>Te acompaño para que puedas alcanzar los objetivos que te propongas, con un plan responsable, constancia y una orientación profesional.</p>
