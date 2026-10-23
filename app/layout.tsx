@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { Anton, Manrope } from "next/font/google";
 import "./globals.css";
 import { Footer, Header, SmoothScroll } from "./site-components";
@@ -37,5 +38,5 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
-  return <html lang="es" className={`${display.variable} ${body.variable}`}><body><SmoothScroll/><Header/>{children}<Footer/></body></html>;
+  return <html lang="es" className={`${display.variable} ${body.variable}`}><body><SmoothScroll/><Header/>{children}<Footer/><Analytics/></body></html>;
 }
